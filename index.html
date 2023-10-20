@@ -4,26 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Spreed Tester</title>
+    <title>Real Time Spreed Tester</title>
 
     <!-- Css Link -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="text-center">
 
-    <h1 class="text-3xl font-bold mb-4 mt-16">Internet Speed Test With IP Checker</h1>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="runSpeedTest()">Run
-        Speed Test</button>
-    <div id="results" class="mt-8"></div>
+    <h1 class="text-3xl font-bold mb-4 mt-16">Ip and Internet Spreed Tester</h1>
+
+    <div>
+        <p id="currentSpeed"></p>
+        <p class="pt-2" id="averageSpeed"></p>
+    </div>
+
+    <div id="results" class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 mx-auto md:w-1/2"></div>
     <div id="loading" class="hidden mt-4">
         <div class="animate-spin rounded-full mx-auto font-semibold h-10 w-10 border-t-2 border-b-2 border-blue-500">
         </div>
         <p class="text-sm text-gray-600 mt-2">Fetching IP address...</p>
     </div>
 
+    <div class="pt-16 pb-12" style="width: 80%; margin: 0 auto;">
+        <canvas id="speedChart"></canvas>
+    </div>
+
 
     <!-- Js File Link -->
+    <script src="js/ipinfo.js"></script>
     <script src="js/spreed.js"></script>
 
 </body>
