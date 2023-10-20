@@ -5,9 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internet Spreed Tester</title>
+
+    <!-- Css Link -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="text-center">
+
+    <h1 class="text-3xl font-bold mb-4 mt-16">Internet Speed Test With IP Checker</h1>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="runSpeedTest()">Run
+        Speed Test</button>
+    <div id="results" class="mt-8"></div>
+    <div id="loading" class="hidden mt-4">
+        <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
+        <p class="text-sm text-gray-600 mt-2">Fetching IP address...</p>
+    </div>
 
 </body>
 
